@@ -18,16 +18,16 @@ else {
 // TASK 2
 
 let time = 7;
-if (time => 15) {
+if (time >= 0 && time <= 15) {
     console.log('first quater')
 }
-else if (time =>30) {
+else if (time >= 16 && time <= 30) {
     console.log('second quarter')
 }
-else if (time => 45) {
+else if (time >= 31 && time <= 45) {
     console.log('third quarter')
 }
-else if (time => 59) {
+else if (time >= 46 && time <= 59) {
     console.log("fourth quarter")
 }
 else {
@@ -58,7 +58,8 @@ else {
 
 // TASK 4
 
-switch ('Sunday') {
+let day = 'Sunday';
+switch (day) {
     case 'Monday':
         console.log('Study');
         break;
