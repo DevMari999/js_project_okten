@@ -139,7 +139,7 @@ console.log(deck);
 // let filter4 = deck.filter (value => value.cardSuit === 'diamonds');
 // console.log(filter4);
 //
-//  let filter5 = deck.filter (value => value.cardSuit === 'clubs' && value.value > '9');
+//  let filter5 = deck.filter (value => value.cardSuit === 'clubs' && value.value >= '9');
 //  console.log(filter5);
 
 // Додатково по reduce
