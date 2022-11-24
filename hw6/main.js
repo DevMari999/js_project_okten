@@ -147,10 +147,15 @@ console.log(deck);
 
 
 let reduce = deck.reduce((endresult, curentresult) => {
-    endresult.spades.push(curentresult.color);
-    endresult.diamonds.push(curentresult.color);
-    endresult.hearts.push(curentresult.color);
-    endresult.clubs.push(curentresult.color);
+    if (curentresult.cardSuit === 'spades') {
+        endresult.spades.push(curentresult);
+    } else if (curentresult.cardSuit === 'diamonds'){
+        endresult.diamonds.push(curentresult);
+    } else if (curentresult.cardSuit === 'hearts') {
+        endresult.hearts.push(curentresult);
+    } else if(curentresult.cardSuit === 'clubs') {
+        endresult.clubs.push(curentresult);
+    }
     return endresult;
 },{
     spades:[],
@@ -158,3 +163,4 @@ let reduce = deck.reduce((endresult, curentresult) => {
     hearts:[],
     clubs:[]
 });
+console.log(reduce);
