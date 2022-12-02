@@ -139,28 +139,28 @@ console.log(deck);
 // let filter4 = deck.filter (value => value.cardSuit === 'diamonds');
 // console.log(filter4);
 //
-//  let filter5 = deck.filter (value => value.cardSuit === 'clubs' && value.value >= '9');
-//  console.log(filter5);
+ let filter5 = deck.filter (value => value.cardSuit === 'clubs' && value.value >= '9');
+ console.log(filter5);
 
 // Додатково по reduce
 // Взяти описану колоду карт, та за допомоги редюсу попакувати всі карти по "мастях" в об'єкт
 
 
-let reduce = deck.reduce((endresult, curentresult) => {
-    if (curentresult.cardSuit === 'spades') {
-        endresult.spades.push(curentresult);
-    } else if (curentresult.cardSuit === 'diamonds'){
-        endresult.diamonds.push(curentresult);
-    } else if (curentresult.cardSuit === 'hearts') {
-        endresult.hearts.push(curentresult);
-    } else if(curentresult.cardSuit === 'clubs') {
-        endresult.clubs.push(curentresult);
-    }
-    return endresult;
-},{
-    spades:[],
-    diamonds:[],
-    hearts:[],
-    clubs:[]
-});
-console.log(reduce);
+// let reduce = deck.reduce((endresult, curentresult) => {
+//     if (curentresult.cardSuit === 'spades') {
+//         endresult.spades.push(curentresult);
+//     } else if (curentresult.cardSuit === 'diamonds'){
+//         endresult.diamonds.push(curentresult);
+//     } else if (curentresult.cardSuit === 'hearts') {
+//         endresult.hearts.push(curentresult);
+//     } else if(curentresult.cardSuit === 'clubs') {
+//         endresult.clubs.push(curentresult);
+//     }
+//     return endresult;
+// },{
+//     spades:[],
+//     diamonds:[],
+//     hearts:[],
+//     clubs:[]
+// });
+// console.log(reduce);
