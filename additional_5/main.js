@@ -30,7 +30,7 @@ console.log(max1);
 
 // - створити функцію яка повертає найбільше число з масиву
 
-const arr = [1, 2, 3 ,4 , 5, 6, 7];
+const arr7 = [1, 2, 3 ,4 , 5, 6, 7];
 const maxNum = (array) => {
     let maxNum = array[0];
     for (const item of array) {
@@ -41,7 +41,7 @@ const maxNum = (array) => {
     return maxNum;
 }
 
-let maxNum1 = maxNum(arr);
+let maxNum1 = maxNum(arr7);
 console.log(maxNum1);
 
 // - створити функцію яка повертає найменьше число з масиву
