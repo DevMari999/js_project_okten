@@ -35,15 +35,16 @@ console.log(sortArray);
 
 // - створити класс для об'єктів Client з полями id, name, surname , email, phone, order (поле є масивом зі списком товарів)
 
-function Client(id, name, surname , email, phone, order) {
-    this.id = id;
-    this.name = name;
-    this.surname = surname;
-    this.email = email;
-    this.phone = phone;
-    this.order = order;
+class  Client {
+    constructor(id, name, surname, email, phone, order) {
+        this.id = id;
+        this.name = name;
+        this.surname = surname;
+        this.email = email;
+        this.phone = phone;
+        this.order = order;
+    }
 }
-
 let clientsArray = [];
 
 let client1 = new Client ( 1, 'Jane', 'K', 'ajajaja@mail.com', '+5849765339', ['table', 'tv', 'book']);
@@ -83,19 +84,30 @@ function Cars(model, producer, year, maxSpeed, engine) {
     this.engine = engine;
 
     this.drive = function () {
-        console.log((`їдемо зі швидкістю ${maxSpeed}`));
+        console.log(`їдемо зі швидкістю ${this.maxSpeed} на годину`);
     }
 
+    // this.info = function () {
+    //     for (const carkey of this) {
+    //         if (typeof this[carkey] !== 'function'){
+    //             console.log(`${carkey} -- ${this[carkey]}`);
+    //         }
+    //     }
+    // }
+
     this.increaseMaxSpeed = function (newSpeed) {
-        maxSpeed = maxSpeed + newSpeed;
+        this.maxSpeed = maxSpeed + newSpeed;
         console.log(newSpeed);
     }
+
     this.changeYear = function (newValue) {
-        year = newValue
+        this.year = newValue
         console.log(newValue);
     }
 
-    this.addDriver = o
+    this.addDriver = function (driver) {
+        this.driver = driver;
+    }
 }
 
 let car = new Cars ('ford mustang', 'Ford', 1969, 118, 390 );
@@ -103,8 +115,9 @@ console.log(car);
 console.log(car.drive());
 console.log(car.increaseMaxSpeed(200));
 console.log(car.changeYear(1972));
-console.log(car.info());
-
+// console.log(car.info());
+console.log(car.addDriver({name: 'Dan'}));
+console.log(car)
 
 // - (Те саме, тільки через клас)
 // Створити клас який дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
@@ -126,6 +139,11 @@ console.log(car.info());
 //     drive () {
 //          console.log((`їдемо зі швидкістю ${this.maxSpeed}`));
 //      }
+
+//      info ()
+//     {
+//     console.log(Cars);
+//     }
 //     increaseMaxSpeed(newSpeed) {
 //         this.maxSpeed = newSpeed;
 //         console.log(newSpeed);
@@ -169,12 +187,20 @@ console.log(newPrincess);
 
 // Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
 
-let prince = new Cinderella('Prince', 19, 36);
-console.log(prince);
+class Prince {
+    constructor(name, age, size) {
+        this.name = name;
+        this.age = age;
+        this.size = size;
+    }
+}
+
+let newPrince = new Prince('Prince', 19, 36 );
+console.log(newPrince);
 
 //     За допомоги циклу знайти яка попелюшка повинна бути з принцом.
 
-let findCinderella = function (array) {
+const findCinderella = function (array) {
     for (const item of array) {
         if (item.name === 'Cinderella' && item.age === 18 && item.shoeSize === 36) {
             console.log(item);
