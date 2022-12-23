@@ -1,0 +1,43 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.postDiv {
+    font-family: Arial;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    margin: 30px;
+    row-gap: 20px;
+    background: rgba(208, 208, 180, 0.39);
+    border: 1px solid rgba(51, 51, 44, 0.9);
+    border-radius: 3px;
+    width: 90%;
+}
+
+.commentsDiv {
+    display: flex;
+    flex-direction: row;
+    column-gap: 15px;
+
+
+}
+
+.innerComments {
+    background: rgba(94, 98, 81, 0.44);
+    border: #5e6251 solid 1px;
+    font-family: Arial;
+    font-size: 15px;
+    width: 20vh;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 3px;
+}

@@ -1,0 +1,79 @@
+body {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    font-family: Arial;
+    font-size: 15px;
+    background: rgba(208, 208, 180, 0.39);
+    padding: 50px;
+    margin: 10px;
+    border: solid 1px rgba(77, 77, 31, 0.51);
+    width: 90%;
+    border-radius: 3px;
+}
+
+.postBtn {
+    width: 90%;
+    height: 30px;
+    font-weight: bold;
+    font-size: 15px;
+    background: rgba(129, 133, 100, 0.3);
+    border: solid 1px rgba(70, 70, 37, 0.74);
+    border-radius: 3px;
+}
+
+.readBtn {
+    background: rgba(206, 213, 177, 0.68);
+    font-size: 12px;
+    text-decoration-line: blink;
+    border-radius: 3px;
+    height: 30px;
+}
+
+.readLnk {
+    text-decoration-line: blink;
+    color: #1c1c19;
+    font-family: Arial;
+}
+
+
+
+.titleDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+.innerTitleDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:solid 1px rgba(47, 51, 36, 0.77);
+    font-size: 15px;
+    font-family: Arial;
+    height: 130px;
+    margin: 5px;
+    padding: 10px;
+    background: rgba(94, 98, 81, 0.46);
+    flex-direction: column;
+    width: 30vh;
+    row-gap: 20px;
+
+}
